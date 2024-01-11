@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="display-4">Artists</h1>
+    <ul class="list-group">
+        {% for artist in artists %}
+            <li class="list-group-item">
+                <a href="/artist/{{ artist.id }}" class="text-decoration-none">
+                    {{ artist.name }} ({{ artist.song_count }} songs)
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

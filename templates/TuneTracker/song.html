@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Song Details</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ song.title }}</h5>
+                <p class="card-text">Artist: <a href="/artist/{{ song.artist_id }}">{{ song.artist }}</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
